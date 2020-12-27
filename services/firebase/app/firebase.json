@@ -15,24 +15,9 @@
       "host": "0.0.0.0",
       "port": 9099
     },
-    "hosting": {
-      "enable": false,
-      "host": "0.0.0.0",
-      "port": 5000
-    },
-    "functions": {
-      "enable": false,
-      "host": "0.0.0.0",
-      "port": 5001
-    },
     "firestore": {
       "host": "0.0.0.0",
       "port": 8080
-    },
-    "pubsub": {
-      "enable": false,
-      "host": "0.0.0.0",
-      "port": 8085
     }
   }
 }

@@ -11,21 +11,12 @@ services:
     network_mode: host
     ports: 
       - 4000:4000 # Emulator Suite UI
-      - 4400:4400 # Other reserved port
-      - 4500:4500 # Other reserved port
-      - 5000:5000 # Firebase Hosting
-      - 5001:5001 # Cloud Functions
       - 8080:8080 # Cloud Firestore
-      - 8085:8085 # Cloud Pub/Sub
       - 9099:9099 # Authentication
     env_file: $PWD/config/.firebase.env
     volumes:
       # Firestore data
       - $PWD/services/firebase/app/seed:/home/node/app/seed
-      # Cloud Hosting
-      - $PWD/services/firebase/app/public:/home/node/app/public
-      # Cloud Functions
-      - $PWD/services/firebase/app/functions/src:/home/node/app/functions/src
     # entrypoint: ["firebase","emulators:start","--import=./seed","--export-on-exit"]
   frontend:
     container_name: frontend

@@ -19,11 +19,11 @@ USER root
 RUN mkdir /home/$UID/app && \
     chown $UID:$GID /home/$UID/app;
 WORKDIR /home/$UID/app
-COPY --chown=$UID:$GID ./app/functions/package*.json ./functions/
+#COPY --chown=$UID:$GID ./app/functions/package*.json ./functions/
 USER $UID
-RUN cd functions && \
-    npm install && \
-    npm cache clean --force;
+#RUN cd functions && \
+#    npm install && \
+#    npm cache clean --force;
 
 FROM base AS start
 ENV NPM_CONFIG_PREFIX /home/$UID/.npm-global
@@ -34,5 +34,5 @@ COPY --chown=$UID:$GID ./app .
 USER $UID
 ENTRYPOINT  if [ "$FIREBASE_TOKEN" == "" ]; \
             then echo "You have not been authorized" && exit 0; \
-            else firebase emulators:start --import=./seed --export-on-exit ; \
+            else firebase emulators:start --only=auth,firestore --import=./seed --export-on-exit ; \
             fi;
