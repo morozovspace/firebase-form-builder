@@ -1,0 +1,55 @@
+{
+  "name": "apps",
+  "description": "Frontend",
+  "author": "Nikita Morozov morozov.space@mail.ru",
+  "version": "1.0.0",
+  "private": true,
+  "scripts": {
+    "dev": "nuxt dev & nuxt storybook",
+    "generate": "nuxt build && nuxt storybook build"
+  },
+  "engines": {
+    "node": "12"
+  },
+  "dependencies": {
+    "nuxt": "^2.14.12",
+    "@nuxtjs/axios": "5.12.2",
+    "@nuxtjs/pwa": "^3.3.3",
+    "@nuxtjs/style-resources": "1.0.0",
+    "@nuxtjs/svg-sprite": "0.4.12",
+    "@nuxtjs/storybook": "3.2.0",
+    "@nuxtjs/firebase": "^7.2.0",
+    "@storybook/addons": "6.1.0",
+    "@storybook/theming": "6.1.1",
+    "@storybook/addon-controls": "6.1.1",
+    "@storybook/addon-notes": "5.3.21",
+    "@storybook/addon-docs": "6.1.1",
+    "@storybook/addon-design-assets": "6.1.1",
+    "firebase": "^8.2.1",
+    "firebase-admin": "^9.4.2",
+    "vuexfire": "^3.2.5",
+    "core-js": "^3.8.1",
+    "cookie-universal-nuxt": "2.1.4"
+  },
+  "devDependencies": {
+    "@storybook/addon-storysource": "6.1.1",
+    "@storybook/addon-storyshots": "6.0.22",
+    "@storybook/addon-storyshots-puppeteer": "6.1.1",
+    "@storybook/addon-console": "1.2.2",
+    "@storybook/addon-actions": "6.1.1",
+    "@storybook/addon-a11y": "6.1.1",
+    "@storybook/addon-links": "6.1.1",
+    "node-sass": "4.14.1",
+    "sass-loader": "10.0.2",
+    "babel-eslint": "10.1.0",
+    "eslint": "7.10.0",
+    "@nuxtjs/eslint-config": "3.1.0",
+    "@nuxtjs/eslint-module": "2.0.0",
+    "eslint-config-prettier": "^7.1.0",
+    "eslint-plugin-nuxt": "^2.0.0",
+    "eslint-plugin-promise": "^4.2.1",
+    "eslint-plugin-prettier": "^3.3.0",
+    "prettier": "^2.2.1",
+    "puppeteer": "5.4.1"
+  }
+}

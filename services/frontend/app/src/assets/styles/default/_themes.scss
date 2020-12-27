@@ -1,0 +1,22 @@
+$themes: (
+  light: (
+    scroll-bg: $grey,
+    scroll-thumb: $light-blue,
+    scroll-thumb-hover: $dark-blue,
+    backgroundColor: $white,
+    altBackgroundColor:$white,
+    border: $light-blue,
+    textColor: $txt-blue,
+    linkColor: $blue,
+  ),
+  dark: (
+    scroll-bg: $scrl-bg-blue,
+    scroll-thumb:$srcrl-thumb-blue,
+    scroll-thumb-hover: $bg-blue,
+    backgroundColor: $bg-blue,
+    altBackgroundColor:$alt-bg-blue,
+    border: $txt-blue,
+    textColor: $white,
+    linkColor: $light-blue,
+  ),
+);

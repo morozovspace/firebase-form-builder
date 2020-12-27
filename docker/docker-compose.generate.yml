@@ -1,0 +1,23 @@
+version: '3.8'
+services:
+  firebase:
+    entrypoint: ["exit","0"]
+  frontend:
+    container_name: frontend
+    build:
+      context: $PWD/services/frontend
+      dockerfile: ./docker/Dockerfile
+      args:
+        user: "node"
+        group: "node"
+    restart: "no"
+    network_mode: host
+    ports: 
+      # Nuxt default port
+      - 3000:3000
+      # Storybook
+      - 3003:3003
+    env_file: $PWD/config/.frontend.env
+    volumes:
+      - $PWD/services/frontend/app/src:/home/node/app/src
+    entrypoint: ["npm","run","generate"]

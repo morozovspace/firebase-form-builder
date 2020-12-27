@@ -1,0 +1,21 @@
+.footer{
+  &__wrapper{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0 30px;
+    height: 100px;
+    width: 100%;
+    box-sizing: border-box;
+    font-family: 'Heebo', sans-serif;
+    @include themify($themes) {
+      color: themed('textColor');  
+    }
+  }
+  &__link{
+    text-decoration: none;
+    @include themify($themes) {
+      color: themed('linkColor');  
+    }
+  }
+}

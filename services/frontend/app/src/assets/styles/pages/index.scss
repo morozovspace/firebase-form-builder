@@ -1,0 +1,40 @@
+.index-page{
+    &__wrapper{
+        position: relative;
+        padding: 0 50px;
+        display: flex;
+        justify-content: space-between;
+        width: 100%;
+        box-sizing: border-box;
+    }
+}
+.notes{
+    &__wrapper{
+        display: flex;
+        justify-content: flex-start;
+    }
+    &__editor{
+        margin-left: 2em;
+        max-width: 320px;
+        width: 100%;
+    }
+}
+.project-description{
+    &__wrapper{
+        display: flex;
+        flex-flow: row;
+    }
+    &__list{
+        li {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: auto;
+            width: 200px;
+        }
+        .icon{
+            display: block;
+            height: 69px;
+        }
+    }
+}

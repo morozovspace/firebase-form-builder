@@ -1,0 +1,13 @@
+.page{
+  &__wrapper {
+    @include themify($themes) {
+      background-color: themed('backgroundColor');
+    }
+  }
+}
+
+.header-and-page{
+  &__wrapper{
+    min-height: calc(100vh - 100px);
+  }
+}
