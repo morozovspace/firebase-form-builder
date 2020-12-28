@@ -10,14 +10,16 @@ export default {
   ssr: false,
   srcDir: "src",
   router,
-  components: true, // Auto import components when used in your templates https://nuxtjs.org/docs/2.x/directory-structure/components
+  components: true,
   head,
   server: {
     port: 3000,
     host: "0.0.0.0",
   },
+  buildModules: [
+    "@nuxtjs/eslint-module",
+  ],
   plugins: [
-    "~/plugins/components",
     "~/plugins/components.client",
     "~/plugins/axios",
   ],

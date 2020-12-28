@@ -13,16 +13,26 @@
 @import "@/assets/styles/layouts/default.scss";
 </style>
 <script>
-import { mapState } from "vuex"
+import { mapState, mapMutations } from "vuex"
 export default {
   data: () => ({}),
   computed: {
     ...mapState({
-      theme: (state) => state.theme,
+      theme: (state) => state.theme.theme,
     }),
   },
-  head() {
-    return false // this.$nuxtI18nSeo()
+  methods: {
+    ...mapMutations({
+      setTheme: "theme/SET_THEME",
+    }),
+  },
+  created() {
+    const theme = this.$cookies.get("theme")
+    if (theme === "dark" || theme === "light") {
+      this.setTheme(theme)
+    } else {
+      this.setTheme(this.theme)
+    }
   },
 }
 </script>

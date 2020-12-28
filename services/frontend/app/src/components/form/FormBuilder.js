@@ -1,29 +1,20 @@
 //  https://apexcharts.com/docs/vue-charts/
 //  https://storybook.js.org/docs/react/essentials/controls#annotation
+/*
 import Chart from "./Chart"
 export default {
   title: "Charts/Chart",
   component: Chart,
   argTypes: {
-    type: {
+    theme: {
       control: {
         type: "select",
         options: [
-          "line",
-          "area",
-          "bar",
-          "radar",
-          "histogram",
-          "pie",
-          "donut",
-          "radialBar",
-          "scatter",
-          "bubble",
-          "heatmap",
-          "candlestick",
+          "dark",
+          "light",
         ],
       },
-      defaultValue: "bar",
+      defaultValue: "dark",
     },
     series: {
       control: "object",
@@ -61,3 +52,4 @@ export const bar = (arg, { argTypes }) => ({
   props: Object.keys(argTypes),
   template: '<Chart v-bind="$props" />',
 })
+*/

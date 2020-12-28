@@ -54,6 +54,7 @@ export const parameters = {
 let currentLocale = 'en';
 
 export const globalTypes = {
+  /*
   locale: {
     name: 'Locale',
     description: 'Internationalization locale',
@@ -65,10 +66,11 @@ export const globalTypes = {
         { value: 'ru', right: 'ru', title: 'Russian' },
       ],
     },
-  },
-};
+  },*/
+}
 
 export const decorators = [
+  /*
   (_, { globals }) => {
     if (globals.locale !== currentLocale) {
       currentLocale = globals.locale;
@@ -87,4 +89,5 @@ export const decorators = [
       },
     };
   },
+  */
 ];

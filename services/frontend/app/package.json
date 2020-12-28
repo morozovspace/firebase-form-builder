@@ -26,10 +26,10 @@
     "@storybook/addon-docs": "6.1.1",
     "@storybook/addon-design-assets": "6.1.1",
     "firebase": "^8.2.1",
-    "firebase-admin": "^9.4.2",
     "vuexfire": "^3.2.5",
     "core-js": "^3.8.1",
-    "cookie-universal-nuxt": "2.1.4"
+    "cookie-universal-nuxt": "2.1.4",
+    "vuelidate": "0.7.6"
   },
   "devDependencies": {
     "@storybook/addon-storysource": "6.1.1",

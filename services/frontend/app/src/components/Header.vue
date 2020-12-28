@@ -1,9 +1,9 @@
 <script>
-import { mapState } from "vuex"
+import { mapActions } from "vuex"
 export default {
-  computed: {
-    ...mapState({
-      theme: (state) => state.theme,
+  methods: {
+    ...mapActions({
+      switchTheme: "theme/switchTheme"
     }),
   },
 }
@@ -11,9 +11,9 @@ export default {
 <template>
   <header class="header__wrapper">
     <nuxt-link class="header__logo" to="/">
-      <h2>Firebase Nuxt TODOS Template {{ theme }}</h2>
+      <h2>Firebase Nuxt TODOS Template</h2>
     </nuxt-link>
-    <Theme />
+    <Toggle @toggle="switchTheme"/>
   </header>
 </template>
 <style lang="scss">
