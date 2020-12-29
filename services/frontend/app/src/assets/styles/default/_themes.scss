@@ -8,6 +8,9 @@ $themes: (
     border: $light-blue,
     textColor: $txt-blue,
     linkColor: $blue,
+    toggle-bg: $grey-lighten-1,
+    active-toggle-bg: $green,
+    toggle-border: $grey-lighten-1,
   ),
   dark: (
     scroll-bg: $scrl-bg-blue,
@@ -18,5 +21,8 @@ $themes: (
     border: $txt-blue,
     textColor: $white,
     linkColor: $light-blue,
+    toggle-bg: $toggle-dark-bg,
+    active-toggle-bg: $blue,
+    toggle-border: $txt-blue,
   ),
 );

@@ -5,31 +5,49 @@ export default {
       type: Boolean,
       default: false,
     },
+    size: {
+      type: String,
+      default: "default",
+    },
     disabled: {
       type: Boolean,
       default: false,
+    },
+  },
+  data: () => ({
+    defaultValue: null,
+  }),
+  watch: {
+    value(newValue, oldValue) {
+      this.defaultValue = newValue
     },
   },
   created() {
     const { value } = this
     this.defaultValue = value
   },
-  data: () => ({
-    defaultValue: null,
-  }),
 }
 </script>
 <template>
-  <div class="controls-toggle__wrapper">
+  <div
+    :class="['controls-toggle__wrapper', `controls-toggle__wrapper-${size}`]"
+  >
     <input
-      class="controls-toggle__checkbox"
-      type="checkbox"
       v-model="defaultValue"
-      @change="$emit('toggle', defaultValue)"
+      :class="[
+        'controls-toggle__checkbox',
+        `controls-toggle__checkbox-${size}`,
+      ]"
+      type="checkbox"
       :disabled="disabled"
-    >
-    <div class="controls-toggle__knobs"></div>
-    <div class="controls-toggle__layer"></div>
+      @change="$emit('toggle', defaultValue)"
+    />
+    <div
+      :class="['controls-toggle__knobs', `controls-toggle__knobs-${size}`]"
+    ></div>
+    <div
+      :class="['controls-toggle__layer', `controls-toggle__layer-${size}`]"
+    ></div>
   </div>
 </template>
 <style lang="scss">
