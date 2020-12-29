@@ -12,7 +12,7 @@ module.exports = nuxifyStorybook({
   addons: [
     '@storybook/addon-notes/register',
     '@storybook/addon-links',
-    '@storybook/addon-design-assets',
+    'storybook-addon-designs',
     '@storybook/addon-a11y',
     '@storybook/addon-storysource',
   ],
