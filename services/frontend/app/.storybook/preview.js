@@ -18,76 +18,53 @@ globalParameters.docs = {
   ...globalParameters.docs,
   prepareForInline,
 }
-// color scheme: https://www.growthbunker.dev/vuedarkmode
+
 export const parameters = {
   ...globalParameters,
   backgrounds: {
-    default: 'ebony-clay',
-    values: [
-      {
-        name: 'ebony-clay',
-        value: '#222C3C'
-      },
-      {
-        name: 'ebony-clay-2',
-        value: '#273142',
-      },
-      {
-        name: 'mirage-2',
-        value: '#171E29',
-      },
-      {
-        name: 'white',
-        value: '#FFFFFF'
-      }
-    ],
     grid: {
       cellSize: 20,
       opacity: 0.5,
       cellAmount: 5,
-      offsetX: 16, // default is 0 if story has 'fullscreen' layout, 16 if layout is 'padded'
-      offsetY: 16, // default is 0 if story has 'fullscreen' layout, 16 if layout is 'padded'
+      offsetX: 16,
+      offsetY: 16,
     },
   }, 
 }
-
-let currentLocale = 'en';
+let currentTheme = "light"
 
 export const globalTypes = {
-  /*
-  locale: {
-    name: 'Locale',
-    description: 'Internationalization locale',
-    defaultValue: currentLocale,
+  theme: {
+    name: "Theme",
+    description: "Global theme for components",
+    defaultValue: currentTheme,
     toolbar: {
-      icon: 'globe',
-      items: [
-        { value: 'en', right: '🇺🇸', title: 'English' },
-        { value: 'ru', right: 'ru', title: 'Russian' },
-      ],
+      icon: "circlehollow",
+      items: ["light", "dark"],
     },
-  },*/
+  },
 }
 
 export const decorators = [
-  /*
-  (_, { globals }) => {
-    if (globals.locale !== currentLocale) {
-      currentLocale = globals.locale;
+  (_, context) => {
+    if (context.globals.theme !== currentTheme) {
+      currentTheme = context.globals.theme
     }
     return {
-      template: '<story />',
-      created () {
-        if (this.$i18n) {
-          this.$i18n.locale = currentLocale;
-        }
+      template: "<story />",
+      data() {
+        return { theme: null }
+      },
+      mounted () {
+        this.theme = currentTheme
+        document.body.classList.add(`theme-${this.theme}`)
+        document.body.classList.add("theme-bg")
       },
       updated () {
-        if (this.$i18n) {
-          this.$i18n.locale = currentLocale;
-        }
+        document.body.classList.remove(`theme-${this.theme}`)
+        this.theme = currentTheme
+        document.body.classList.add(`theme-${this.theme}`)
       },
-    };
+    }
   },
-  */
-];
+]

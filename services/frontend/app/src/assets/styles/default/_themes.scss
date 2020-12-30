@@ -11,6 +11,7 @@ $themes: (
     toggle-bg: $grey-lighten-1,
     active-toggle-bg: $green,
     toggle-border: $grey-lighten-1,
+    bg: $light-bg,
   ),
   dark: (
     scroll-bg: $scrl-bg-blue,
@@ -24,5 +25,14 @@ $themes: (
     toggle-bg: $toggle-dark-bg,
     active-toggle-bg: $blue,
     toggle-border: $txt-blue,
+    bg: $dark-bg,
   ),
 );
+
+.theme-dark {
+  background-color: $dark-bg;
+}
+
+.theme-light {
+  background-color: $light-bg;
+}
