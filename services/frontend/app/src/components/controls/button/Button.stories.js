@@ -5,29 +5,36 @@ export default {
   title: "Controls/Button",
   argTypes: {
     label: {
+      type: "string",
       control: {
         type: "text",
       },
       defaultValue: "My custom button",
+      description: "Button label",
     },
     size: {
+      type: "enum",
       control: {
         type: "select",
         options: ["default"],
       },
       defaultValue: "default",
+      description: "Button size",
     },
     disabled: {
+      type: "boolean",
       control: {
         type: "boolean",
       },
       defaultValue: false,
+      description: "Disable button",
     },
   },
   parameters: {
     design: {
       type: "figma",
-      url: "https://www.figma.com/file/1iHx5jWf2dnSivjYgLRioz/Untitled",
+      url:
+        "https://www.figma.com/file/1iHx5jWf2dnSivjYgLRioz/Firebase-Form-Builder?node-id=11%3A0",
     },
     controls: { expanded: true },
   },
