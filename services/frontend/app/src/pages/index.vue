@@ -11,8 +11,7 @@ export default {
     try {
       await this.bindForms()
     } catch (e) {
-      // Show error alert
-      console.log("Created", e)
+      // Handle error
     }
   },
   methods: {
@@ -21,26 +20,26 @@ export default {
     }),
     copyConfig(config) {
       // copy config to copy buffer
-      const input = document.createElement('input', {
-        value: "test value"
+      const input = document.createElement("input", {
+        value: "test value",
       })
       input.select()
       input.setSelectionRange(0, 99999) /* For mobile devices */
 
       /* Copy the text inside the text field */
-      document.execCommand("copy");
-      
+      document.execCommand("copy")
     },
   },
 }
 </script>
 <template>
   <main class="index-page__wrapper">
+    <nuxt-link to="/form/add">Add</nuxt-link>
+    <ul class="index-page__toggles">
+      <li><Toggle :value="false" /></li>
+      <li><Toggle :value="true" /></li>
+    </ul>
     <div>
-      Description of project
-    </div>
-    <div>
-
       <ul v-for="form of forms" :key="form._id">
         <li>
           <div>

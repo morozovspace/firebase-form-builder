@@ -1,3 +1,3 @@
 <template>
-  <div>Add form</div>
+  <div>Some form</div>
 </template>
