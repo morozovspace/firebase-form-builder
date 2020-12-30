@@ -5,6 +5,10 @@ export default {
       type: Boolean,
       default: false,
     },
+    label: {
+      type: String,
+      default: "toggle button",
+    },
     size: {
       type: String,
       default: "default",
@@ -34,6 +38,7 @@ export default {
   >
     <input
       v-model="defaultValue"
+      :aria-label="label"
       :class="[
         'controls-toggle__checkbox',
         `controls-toggle__checkbox-${size}`,
