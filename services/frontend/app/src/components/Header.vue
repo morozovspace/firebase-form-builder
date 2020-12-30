@@ -1,19 +1,24 @@
 <script>
-import { mapActions } from "vuex"
+import { mapState, mapActions } from "vuex"
 export default {
+  computed: {
+    ...mapState({
+      theme: (state) => state.theme.theme,
+    }),
+  },
   methods: {
     ...mapActions({
-      switchTheme: "theme/switchTheme"
+      switchTheme: "theme/switchTheme",
     }),
   },
 }
 </script>
 <template>
   <header class="header__wrapper">
-    <nuxt-link class="header__logo" to="/">
-      <h2>Firebase Nuxt TODOS Template</h2>
+    <nuxt-link class="header__link" to="/">
+      <h2>Firebase Form Builder</h2>
     </nuxt-link>
-    <Toggle @toggle="switchTheme"/>
+    <Toggle :value="theme === 'dark'" @toggle="switchTheme" />
   </header>
 </template>
 <style lang="scss">
