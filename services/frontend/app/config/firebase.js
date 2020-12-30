@@ -3,6 +3,7 @@ export default {
   config: {
     apiKey: "AIzaSyDMMRld6GJFBfBJVBaUjCnnBMV-ckeAs-o",
     authDomain: "http://localhost:9099",
+    databaseURL: "http://localhost:8080",
     projectId: "morozov-st",
     storageBucket: "morozov-st.appspot.com",
     messagingSenderId: "925528804050",
