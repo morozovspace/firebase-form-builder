@@ -21,11 +21,6 @@ export default {
       theme: (state) => state.theme.theme,
     }),
   },
-  methods: {
-    ...mapMutations({
-      setTheme: "theme/SET_THEME",
-    }),
-  },
   created() {
     const theme = this.$cookies.get("theme")
     if (theme === "dark" || theme === "light") {
@@ -33,6 +28,11 @@ export default {
     } else {
       this.setTheme(this.theme)
     }
+  },
+  methods: {
+    ...mapMutations({
+      setTheme: "theme/SET_THEME",
+    }),
   },
 }
 </script>
