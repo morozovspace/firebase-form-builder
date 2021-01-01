@@ -17,5 +17,13 @@
     @include themify($themes) {
       color: themed('textColor');  
     }
+    &:focus{
+      outline-width: 2px;
+      outline-style: solid;
+      outline-offset: 1px;
+      @include themify($themes) {
+        outline-color: themed('outline');  
+      }
+    }
   }
 }
