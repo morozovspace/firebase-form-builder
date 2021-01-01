@@ -12,6 +12,7 @@ $themes: (
     active-toggle-bg: $green,
     toggle-border: $grey-lighten-1,
     bg: $light-bg,
+    outline: $blue,
   ),
   dark: (
     scroll-bg: $scrl-bg-blue,
@@ -26,6 +27,7 @@ $themes: (
     active-toggle-bg: $blue,
     toggle-border: $txt-blue,
     bg: $dark-bg,
+    outline: $white,
   ),
 );
 
