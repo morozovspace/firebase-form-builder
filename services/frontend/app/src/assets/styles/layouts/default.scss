@@ -1,5 +1,5 @@
 .page{
-  &__wrapper {
+&__wrapper {
     @include themify($themes) {
       background-color: themed('backgroundColor');
     }
